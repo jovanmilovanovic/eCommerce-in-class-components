@@ -12,7 +12,7 @@
       {
         "id": 2,
         "sku": 11854078013954528,
-        "title": "Danger Knife Grey T-Shirt",
+        "title": "Danger Knife Grey one-size T-Shirt",
         "description": "Danger Knife Grey",
         "availableSizes": ["X", "M", "L"],
         "price": 14.90,
@@ -21,7 +21,7 @@
       {
         "id": 3,
         "sku": 876661122392077,
-        "title": "White DGK Script Tee",
+        "title": "White DGK Script Tee T-Shirt",
         "description": "White DGK Script",
         "availableSizes": ["X", "M", "L"],
         "price": 14.90,
@@ -30,7 +30,7 @@
       {
         "id": 4,
         "sku": 9197907543445676,
-        "title": "Born On The Streets  T-Shirt",
+        "title": "Born On The Streets one-size T-Shirt",
         "description": "Born On The Streets",
         "availableSizes": ["XL"],
         "price": 25.90,
@@ -39,9 +39,9 @@
       {
         "id": 5,
         "sku": 10547961582846888,
-        "title": "Tso 3D Short Sleeve T-Shirt A",
+        "title": "Tso 3D Short Sleeve one-size T-Shirt A",
         "description": "Tso 3D Short Sleeve",
-        "availableSizes": ["X", "L", "XL"],
+        "availableSizes": ["X"],
         "price": 10.90,
         "isFreeShipping": false
       },
@@ -67,7 +67,7 @@
       {
         "id": 8,
         "sku": 5619496040738316,
-        "title": "Tso 3D Black T-Shirt",
+        "title": "Tso 3D Black Skeleton T-Shirt",
         "description": "",
         "availableSizes": ["XL"],
         "style": "Azul escuro",
@@ -77,7 +77,7 @@
       {
         "id": 9,
         "sku": 11600983276356164,
-        "title": "Crazy Monkey Grey",
+        "title": "Crazy Monkey Grey T-Shirt",
         "description": "",
         "availableSizes": ["L", "XL"],
         "price": 134.90,

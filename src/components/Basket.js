@@ -6,7 +6,7 @@ export default class Basket extends Component {
     render() {
         const { cartItems } = this.props
         return (
-            <div className='alert alert-info'>
+            <div className='alert'>
                 {cartItems.length === 0 ? "Basket is empty" :
                     <div> You have {cartItems.length} items in the basket. <hr /></div>
                 }
@@ -19,7 +19,7 @@ export default class Basket extends Component {
                                         <strong>{item.title}</strong>
                                         <button
                                             style={{float: 'right'}}
-                                            className='btn btn-danger'
+                                            className='btnn'
                                             onClick={ e => this.props.handleRemoveFromCart(e,item)}
                                         >
                                             x
@@ -34,8 +34,8 @@ export default class Basket extends Component {
                         <strong>Sum: {util.formatCurrency(cartItems.reduce((a,c) => (a + c.price*c.count),0))}</strong>
                             <br/>
                             <button
-                                onClick={() => alert('Todo: Implement checkout page.')}
-                                className='btn btn-primary'
+                                onClick={() => alert('I must implement checkout page.')}
+                                className='btnn-n'
                             >
                                 Checkout
                             </button>

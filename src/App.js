@@ -96,7 +96,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div className="container">
-          <h1>E-comerce shopping cart application</h1>
+          <h1>E-commerce shopping cart application</h1>
           <hr />
           <div className='row'>
             <div className='col-md-9'>
