@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## First we have to run json-server public/db.json --port 8000
+## First we have to run json-server public/db.json --port 8000 in terminal
 ### Then  `npm start`
 ## Available Scripts
 
