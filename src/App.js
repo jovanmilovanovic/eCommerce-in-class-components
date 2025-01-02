@@ -48,47 +48,47 @@ class App extends Component {
       const cartItems = stateObj.cartItems;
       let productAlreadyInTheCart = false;
       console.log(cartItems)
-      cartItems.forEach(x =>{
-        if(x.id === product.id) {
+      cartItems.forEach(x => {
+        if (x.id === product.id) {
           x.count += 1
           productAlreadyInTheCart = true;
         }
       })
-      if(!productAlreadyInTheCart){
-        cartItems.push({...product,count: 1})
+      if (!productAlreadyInTheCart) {
+        cartItems.push({ ...product, count: 1 })
       }
       localStorage.setItem('cartItems', JSON.stringify(cartItems))
       console.log(cartItems);
-      return {cartItems: cartItems}
+      return { cartItems: cartItems }
     });
   }
-  handleRemoveFromCart = (e,product) => {
-    this.setState( stateObj => {
-      const cartItems = stateObj.cartItems.filter( a => a.id != product.id)
-      localStorage.setItem('cartItems',JSON.stringify(cartItems))
-      return {cartItems: cartItems}
+  handleRemoveFromCart = (e, product) => {
+    this.setState(stateObj => {
+      const cartItems = stateObj.cartItems.filter(a => a.id != product.id)
+      localStorage.setItem('cartItems', JSON.stringify(cartItems))
+      return { cartItems: cartItems }
     })
   }
 
   listProducts = () => {
     this.setState(stateObj => {
-      if(stateObj.sort !== ''){
-        stateObj.products.sort((a,b) =>
+      if (stateObj.sort !== '') {
+        stateObj.products.sort((a, b) =>
           (stateObj.sort === 'lowestprice')
-          ? ((a.price > b.price) ? 1 : -1)
-          : ((a.price < b.price) ? 1 : -1)
+            ? ((a.price > b.price) ? 1 : -1)
+            : ((a.price < b.price) ? 1 : -1)
         )
       } else {
-          stateObj.products.sort((a,b) => (a.id > b.id) ? 1 : -1);
+        stateObj.products.sort((a, b) => (a.id > b.id) ? 1 : -1);
       }
-      if(stateObj.size !== ''){
+      if (stateObj.size !== '') {
         return {
           filterProducts: stateObj.products.filter(a =>
             a.availableSizes.indexOf(stateObj.size.toUpperCase())
           )
         }
       }
-      return {filterProducts: this.state.products};
+      return { filterProducts: this.state.products };
     })
   }
 
@@ -96,20 +96,20 @@ class App extends Component {
     return (
       <div className='App'>
         <div className="container">
-          <h1>E-commerce shopping cart application</h1>
+          <h1 className='naslov'>E-commerce shopping cart application</h1>
           <hr />
           <div className='row'>
             <div className='col-md-9'>
-             <Filter 
-             count= {this.state.filterProducts.length}
-            handleSortChange={this.handleSortChange}
-            handleSizeChange={this.handleSizeChange}/>
+              <Filter
+                count={this.state.filterProducts.length}
+                handleSortChange={this.handleSortChange}
+                handleSizeChange={this.handleSizeChange} />
               <hr />
               <Products products={this.state.filterProducts} handleAddToCart={this.handleAddToCart} />
             </div>
 
             <div className='col-md-3'>
-              <Basket cartItems = {this.state.cartItems} handleRemoveFromCart = {this.handleRemoveFromCart}/>
+              <Basket cartItems={this.state.cartItems} handleRemoveFromCart={this.handleRemoveFromCart} />
             </div>
           </div>
         </div>

@@ -12,15 +12,15 @@ export default class Basket extends Component {
                 }
                 {cartItems.length > 0 &&
                     <div>
-                        <ul style={{marginLeft: -25}}>
+                        <ul style={{ marginLeft: -25 }}>
                             {
-                                cartItems.map( item => (
+                                cartItems.map(item => (
                                     <li key={item.id}>
                                         <strong>{item.title}</strong>
                                         <button
-                                            style={{float: 'right'}}
+                                            style={{ float: 'right' }}
                                             className='btnn'
-                                            onClick={ e => this.props.handleRemoveFromCart(e,item)}
+                                            onClick={e => this.props.handleRemoveFromCart(e, item)}
                                         >
                                             x
                                         </button>
@@ -30,15 +30,15 @@ export default class Basket extends Component {
                                 ))
                             }
                         </ul>
-                        
-                        <strong>Sum: {util.formatCurrency(cartItems.reduce((a,c) => (a + c.price*c.count),0))}</strong>
-                            <br/>
-                            <button
-                                onClick={() => alert('I must implement checkout page.')}
-                                className='btnn-n'
-                            >
-                                Checkout
-                            </button>
+
+                        <strong>Sum: {util.formatCurrency(cartItems.reduce((a, c) => (a + c.price * c.count), 0))}</strong>
+                        <br />
+                        <button
+                            onClick={() => alert('I must implement checkout page.')}
+                            className='btnn-n'
+                        >
+                            Checkout
+                        </button>
                     </div>
                 }
             </div>
